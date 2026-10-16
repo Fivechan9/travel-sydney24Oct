@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Business & Leisure Itinerary | Oct 24 - 29, 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .day-section {
+                display: block !important;
+                page-break-inside: avoid;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased pb-16">
+
+    <!-- Toast Notification for Copy Actions -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 text-sm font-medium pointer-events-none">
+        <i class="ph-fill ph-check-circle text-emerald-400 text-lg"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="bg-gradient-to-br from-slate-900 via-brand-900 to-slate-900 text-white pt-8 pb-14 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="w-full h-full" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="700" cy="50" r="220" stroke="white" stroke-width="2" stroke-dasharray="8 8"/>
+                <circle cx="100" cy="350" r="180" stroke="white" stroke-width="2"/>
+            </svg>
+        </div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-xs font-medium text-sky-200">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Trip Status: Ready &bull; Record Locator: WDZBUN
+                </div>
+                <div class="flex items-center gap-2 no-print">
+                    <button onclick="toggleAllDays()" id="view-mode-btn" class="inline-flex items-center gap-1.5 text-xs font-medium bg-white/10 hover:bg-white/20 border border-white/15 px-3 py-1.5 rounded-lg transition">
+                        <i class="ph ph-rows text-base"></i>
+                        <span>Show All Days</span>
+                    </button>
+                    <button onclick="window.print()" class="inline-flex items-center gap-1.5 text-xs font-medium bg-white/10 hover:bg-white/20 border border-white/15 px-3 py-1.5 rounded-lg transition">
+                        <i class="ph ph-printer text-base"></i>
+                        <span>Print / PDF</span>
+                    </button>
+                </div>
+            </div>
+
+            <h1 class="text-2xl sm:text-4xl font-bold tracking-tight mb-2">Sydney Business &amp; Casual Leisure Guide</h1>
+            <p class="text-sky-100/80 text-sm sm:text-base max-w-2xl">
+                Windows 11 &amp; Intel vPro Workshop + Relaxed Harbour &amp; Coastal Roadmaps
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-sky-100">
+                <div class="flex items-center gap-1.5 bg-slate-800/60 px-3 py-1.5 rounded-lg border border-white/10">
+                    <i class="ph ph-calendar-blank text-sky-400 text-base"></i>
+                    <span>Oct 24 – Oct 29, 2026</span>
+                </div>
+                <div class="flex items-center gap-1.5 bg-slate-800/60 px-3 py-1.5 rounded-lg border border-white/10">
+                    <i class="ph ph-map-pin text-sky-400 text-base"></i>
+                    <span>North Sydney, NSW, Australia</span>
+                </div>
+                <div class="flex items-center gap-1.5 bg-slate-800/60 px-3 py-1.5 rounded-lg border border-white/10">
+                    <i class="ph ph-sun text-amber-300 text-base"></i>
+                    <span>Spring Weather: 14°C – 23°C</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Logistics Cards (Overlapping Header) -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            
+            <!-- Flights Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-600 flex items-center gap-1.5">
+                            <i class="ph-fill ph-airplane-tilt text-base"></i> Flights (Qantas)
+                        </span>
+                        <button onclick="copyText('DFUAIX', 'Flight PNR DFUAIX copied!')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono px-2 py-1 rounded flex items-center gap-1 transition" title="Copy Confirmation">
+                            <span>PNR: DFUAIX</span>
+                            <i class="ph ph-copy text-xs"></i>
+                        </button>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="flex justify-between font-semibold text-slate-900">
+                                <span>SIN &rarr; SYD (QF 2)</span>
+                                <span class="text-xs font-normal text-slate-500">Oct 24</span>
+                            </div>
+                            <div class="text-xs text-slate-600 mt-0.5">7:30 PM &ndash; 6:10 AM (+1) &bull; 7h 40m</div>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="flex justify-between font-semibold text-slate-900">
+                                <span>SYD &rarr; SIN (QF 1)</span>
+                                <span class="text-xs font-normal text-slate-500">Oct 29</span>
+                            </div>
+                            <div class="text-xs text-slate-600 mt-0.5">4:30 PM &ndash; 9:35 PM &bull; 8h 05m</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span>Ticket: 0815866284402</span>
+                    <span class="text-emerald-600 font-medium">Ticketed</span>
+                </div>
+            </div>
+
+            <!-- Hotel Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-600 flex items-center gap-1.5">
+                            <i class="ph-fill ph-buildings text-base"></i> Hotel Stay (4 Nights)
+                        </span>
+                        <button onclick="copyText('9105425780572', 'Hotel confirmation copied!')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono px-2 py-1 rounded flex items-center gap-1 transition">
+                            <span>#9105425780572</span>
+                            <i class="ph ph-copy text-xs"></i>
+                        </button>
+                    </div>
+                    <h2 class="font-bold text-slate-900 text-base">Vibe Hotel North Sydney</h2>
+                    <p class="text-xs text-slate-600 mt-0.5">171 Pacific Highway, North Sydney 2060</p>
+                    <div class="mt-3 grid grid-cols-2 gap-2 text-xs bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                        <div>
+                            <span class="text-slate-400 block">Check-in</span>
+                            <span class="font-semibold text-slate-800">Sun, Oct 25</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block">Check-out</span>
+                            <span class="font-semibold text-slate-800">Thu, Oct 29</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Deluxe Room, King with Sofa</p>
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span>Tel: +61-2-99551111</span>
+                    <button onclick="copyText('171 Pacific Highway, North Sydney 2060', 'Hotel address copied!')" class="text-brand-600 hover:underline font-medium">Copy Address</button>
+                </div>
+            </div>
+
+            <!-- Venue & Support Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-600 flex items-center gap-1.5">
+                            <i class="ph-fill ph-briefcase text-base"></i> Webinar Venue
+                        </span>
+                        <span class="text-xs bg-emerald-50 text-emerald-700 font-medium px-2 py-0.5 rounded-full border border-emerald-200">
+                            2-min walk from hotel
+                        </span>
+                    </div>
+                    <h2 class="font-bold text-slate-900 text-base">Microsoft Office</h2>
+                    <p class="text-xs text-slate-600 mt-0.5">Level 27, 1 Denison Street, North Sydney, NSW 2060</p>
+
+                    <div class="mt-3 p-2.5 rounded-xl bg-amber-50/70 border border-amber-200/70 text-xs text-amber-900">
+                        <div class="font-semibold flex items-center gap-1">
+                            <i class="ph-fill ph-train text-amber-600"></i> Easy Transit Tip:
+                        </div>
+                        <p class="mt-0.5 text-amber-800 leading-relaxed">
+                            <strong>Victoria Cross Metro Station</strong> is directly connected to your hotel and 1 Denison St. Tap any credit card or phone to ride!
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span>BCD Support: +65 6477 6389</span>
+                    <button onclick="copyText('1 Denison Street, North Sydney NSW 2060', 'Venue address copied!')" class="text-brand-600 hover:underline font-medium">Copy Venue</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Day Selector Tabs -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-2 mb-6 sticky top-3 z-30 no-print">
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar" id="day-tabs">
+                <button onclick="selectDay(0)" data-day="0" class="day-tab flex-1 min-w-[120px] py-2.5 px-3 rounded-xl text-left transition-all bg-brand-600 text-white shadow-sm">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-wider opacity-80 font-medium">Sat, Oct 24</span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-white/20">Flight</span>
+                    </div>
+                    <div class="font-bold text-sm mt-0.5 truncate">1. Departure</div>
+                </button>
+                <button onclick="selectDay(1)" data-day="1" class="day-tab flex-1 min-w-[130px] py-2.5 px-3 rounded-xl text-left transition-all hover:bg-slate-100 text-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Sun, Oct 25</span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-medium">Leisure</span>
+                    </div>
+                    <div class="font-bold text-sm mt-0.5 truncate">2. Easy Harbour</div>
+                </button>
+                <button onclick="selectDay(2)" data-day="2" class="day-tab flex-1 min-w-[130px] py-2.5 px-3 rounded-xl text-left transition-all hover:bg-slate-100 text-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Mon, Oct 26</span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-medium">Leisure</span>
+                    </div>
+                    <div class="font-bold text-sm mt-0.5 truncate">3. Ferry &amp; Sights</div>
+                </button>
+                <button onclick="selectDay(3)" data-day="3" class="day-tab flex-1 min-w-[130px] py-2.5 px-3 rounded-xl text-left transition-all hover:bg-slate-100 text-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Tue, Oct 27</span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 font-medium">Webinar</span>
+                    </div>
+                    <div class="font-bold text-sm mt-0.5 truncate">4. Agenda Day 1</div>
+                </button>
+                <button onclick="selectDay(4)" data-day="4" class="day-tab flex-1 min-w-[130px] py-2.5 px-3 rounded-xl text-left transition-all hover:bg-slate-100 text-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Wed, Oct 28</span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 font-medium">Mix</span>
+                    </div>
+                    <div class="font-bold text-sm mt-0.5 truncate">5. Day 2 + Sunset</div>
+                </button>
+                <button onclick="selectDay(5)" data-day="5" class="day-tab flex-1 min-w-[130px] py-2.5 px-3 rounded-xl text-left transition-all hover:bg-slate-100 text-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400 font-medium">Thu, Oct 29</span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 font-medium">Return</span>
+                    </div>
+                    <div class="font-bold text-sm mt-0.5 truncate">6. Slow Morning</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Days Container -->
+        <div id="days-container" class="space-y-6">
+
+            <!-- DAY 1: OCT 24 -->
+            <section id="day-0" class="day-section bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+                <div class="bg-slate-900 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-sky-400">Day 1 &bull; Saturday, October 24, 2026</span>
+                        <h2 class="text-xl font-bold mt-0.5">Evening Departure from Singapore</h2>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-medium">Overnight Nonstop Flight</span>
+                </div>
+                <div class="p-6">
+                    <!-- Visual Roadmap -->
+                    <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-200/70">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Route Roadmap</div>
+                        <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-700">
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-house text-brand-600"></i> Home / Office
+                            </span>
+                            <i class="ph ph-arrow-right text-slate-400"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-slate-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-airplane-takeoff text-brand-600"></i> Changi Airport (SIN) T1
+                            </span>
+                            <i class="ph ph-arrow-right text-slate-400"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-brand-50 text-brand-700 border border-brand-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-moon-stars"></i> Qantas QF 2 (7h 40m)
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-slate-500 pt-1">05:00 PM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Arrive at Singapore Changi Airport (SIN)</h3>
+                                <p class="text-sm text-slate-600 mt-1">Check in at Qantas counters. Confirmation: <span class="font-mono font-semibold text-slate-800">DFUAIX</span>.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-brand-600 pt-1">07:30 PM</div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-slate-900">Board Qantas QF 2 to Sydney (SYD)</h3>
+                                <p class="text-sm text-slate-600 mt-1">Nonstop flight (7h 40m). Economy Cabin. Try to get some sleep on board as you will land early Sunday morning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DAY 2: OCT 25 -->
+            <section id="day-1" class="day-section hidden bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+                <div class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-200">Day 2 &bull; Sunday, October 25, 2026</span>
+                        <h2 class="text-xl font-bold mt-0.5">Arrival &amp; Casual North Shore Harbour Stroll</h2>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-medium">Low-Energy / Jetlag Friendly</span>
+                </div>
+                <div class="p-6">
+                    <!-- Visual Roadmap -->
+                    <div class="mb-6 bg-emerald-50/60 p-4 rounded-xl border border-emerald-200/70">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-emerald-700 mb-3">Sunday Casual Roadmap (Stay Local &amp; Unhurried)</div>
+                        <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-700">
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-emerald-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-airplane-landing text-emerald-600"></i> Sydney Airport
+                            </span>
+                            <i class="ph ph-arrow-right text-emerald-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-emerald-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-bed text-emerald-600"></i> Vibe Hotel (Drop Bags)
+                            </span>
+                            <i class="ph ph-arrow-right text-emerald-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-emerald-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-tree text-emerald-600"></i> Wendy's Secret Garden
+                            </span>
+                            <i class="ph ph-arrow-right text-emerald-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-emerald-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-bridge text-emerald-600"></i> Kirribilli &amp; Milsons Point
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-slate-500 pt-1">06:10 AM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Land at Sydney Airport (SYD) &amp; Head to Hotel</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    <strong>Easiest Transit:</strong> Take the Airport Train to <em>Central Station</em>, then transfer to the <strong>M1 Metro Line</strong> toward Tallawong and exit at <strong>Victoria Cross Station</strong> (right next to Vibe Hotel North Sydney). Or take a 25-min Uber/Taxi directly to 171 Pacific Highway.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-emerald-600 pt-1">08:30 AM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Drop Luggage &amp; Relaxed Aussie Brunch</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Leave your bags at Vibe Hotel reception. Walk 3 minutes to <strong>Goodfields Eatery</strong> (37A Miller St) or <strong>Sol Bread + Wine</strong> for a relaxed coffee and warm breakfast.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-emerald-600 pt-1">10:30 AM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Wendy Whiteley's Secret Garden (Lavender Bay)</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    A tranquil, shaded sanctuary just a 12-minute gentle downhill stroll from your hotel. Sit on a garden bench overlooking Lavender Bay and the Sydney Harbour Bridge without any crowds.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-emerald-600 pt-1">12:30 PM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Lunch at Kirribilli Village &amp; Milsons Point Walk</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Follow the flat harbourside boardwalk past Luna Park to <strong>Milsons Point</strong> (right underneath the Harbour Bridge with direct views of the Opera House). Have a casual lunch in leafy Kirribilli Village (try <em>Celsius Coffee Co.</em> on the wharf or fish &amp; chips by the water).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-slate-500 pt-1">02:30 PM</div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-slate-900">Hotel Check-in, Afternoon Nap &amp; Easy Dinner</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Take the train 1 stop from Milsons Point back to North Sydney. Check into your room, rest up after the overnight flight, and grab a casual dinner right downstairs at <strong>Glorietta</strong> (Italian at 100 Mount St) or <strong>Green Moustache</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DAY 3: OCT 26 -->
+            <section id="day-2" class="day-section hidden bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-700 to-cyan-700 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-cyan-200">Day 3 &bull; Monday, October 26, 2026</span>
+                        <h2 class="text-xl font-bold mt-0.5">Full Leisure Day: Iconic Harbour &amp; Manly Ferry Cruise</h2>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-medium">No Webinar Today &bull; 100% Free</span>
+                </div>
+                <div class="p-6">
+                    <!-- Visual Roadmap -->
+                    <div class="mb-6 bg-cyan-50/60 p-4 rounded-xl border border-cyan-200/70">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-cyan-800 mb-3">Monday Scenic Roadmap (Effortless Ferry &amp; Flat Walks)</div>
+                        <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-700">
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-cyan-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-train text-cyan-600"></i> Victoria Cross Metro
+                            </span>
+                            <i class="ph ph-arrow-right text-cyan-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-cyan-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-buildings text-cyan-600"></i> The Rocks &amp; Opera House
+                            </span>
+                            <i class="ph ph-arrow-right text-cyan-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-cyan-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-boat text-cyan-600"></i> F1 Ferry (Wharf 3)
+                            </span>
+                            <i class="ph ph-arrow-right text-cyan-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-cyan-200 flex items-center gap-1.5">
+                                <i class="ph-fill ph-sun-horizon text-cyan-600"></i> Manly Beach &amp; Shelly Beach
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-cyan-700 pt-1">09:30 AM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">3-Minute Metro Under the Harbour</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Sleep in at your own pace. Hop on the Metro at <strong>Victoria Cross</strong> and alight 1 stop later at <strong>Barangaroo Station</strong> (only 3 minutes!).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-cyan-700 pt-1">10:00 AM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Wander The Rocks &amp; Circular Quay</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Stroll through <strong>The Rocks</strong> historic cobblestone laneways and heritage buildings. Follow the completely flat waterfront promenade around Circular Quay right up to the steps of the <strong>Sydney Opera House</strong> and into the peaceful <strong>Royal Botanic Garden</strong>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-cyan-700 pt-1">12:30 PM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Relaxed Waterfront Lunch</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Dine outdoors at <strong>Opera Bar</strong> (right beside the Opera House looking at the Harbour Bridge) or grab casual gourmet bites at the <strong>Gateway Food Court</strong> at Circular Quay.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-cyan-700 pt-1">02:15 PM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Scenic F1 Ferry to Manly Beach</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Board the iconic green-and-gold <strong>F1 Manly Ferry</strong> from Circular Quay Wharf 3. This 30-minute ride gives you the best harbour cruise in Sydney for the price of a regular bus ticket. In Manly, walk down <strong>The Corso</strong> to the ocean beach, grab gelato, and take the flat coastal path to calm <strong>Shelly Beach</strong>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-slate-500 pt-1">05:30 PM</div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-slate-900">Golden Hour Return Ferry &amp; Dinner</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Catch the ferry back to Circular Quay as the city lights come on. Enjoy dinner in the CBD or Darling Square before taking the Metro straight back to Victoria Cross.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DAY 4: OCT 27 -->
+            <section id="day-3" class="day-section hidden bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+                <div class="bg-gradient-to-r from-brand-700 to-blue-900 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-sky-200">Day 4 &bull; Tuesday, October 27, 2026</span>
+                        <h2 class="text-xl font-bold mt-0.5">Windows 11 &amp; Intel vPro Agenda &mdash; Day 1</h2>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-medium">9:00 AM – 9:00 PM &bull; Full Conference Day</span>
+                </div>
+                <div class="p-6">
+                    <div class="mb-5 p-3.5 rounded-xl bg-blue-50 border border-blue-200 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-blue-900">
+                        <div class="flex items-center gap-2">
+                            <i class="ph-fill ph-map-pin text-blue-600 text-lg"></i>
+                            <span><strong>Venue:</strong> Microsoft Office, Level 27, 1 Denison Street, North Sydney (2-min walk across the road from your hotel)</span>
+                        </div>
+                    </div>
+
+                    <div class="divide-y divide-slate-100 text-sm">
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">09:00 AM - 09:40 AM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-blue-50 text-blue-700 font-medium">Session</span>
+                            <span class="font-semibold text-slate-900">Welcome &amp; keynote</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">09:40 AM - 10:10 AM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-blue-50 text-blue-700 font-medium">Session</span>
+                            <span class="font-semibold text-slate-900">Windows as the platform for work</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4 bg-slate-50/70 -mx-6 px-6">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-amber-600">10:10 AM - 10:30 AM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-amber-100 text-amber-800 font-medium">Break</span>
+                            <span class="text-slate-600 font-medium">Morning Break &amp; Coffee</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">10:30 AM - 11:15 AM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-blue-50 text-blue-700 font-medium">Session</span>
+                            <span class="font-semibold text-slate-900">Windows: the platform for AI &amp; agents</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">11:15 AM - 11:45 AM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-blue-50 text-blue-700 font-medium">Session</span>
+                            <span class="font-semibold text-slate-900">Apple myth busting</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">11:45 AM - 12:00 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-blue-50 text-blue-700 font-medium">Session</span>
+                            <span class="font-semibold text-slate-900">Microsoft &amp; Intel co-marketing and joint channel activation</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4 bg-slate-50/70 -mx-6 px-6">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-amber-600">12:00 PM - 01:00 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-amber-100 text-amber-800 font-medium">Meal</span>
+                            <span class="text-slate-600 font-medium">Lunch</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">01:00 PM - 02:00 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-indigo-50 text-indigo-700 font-medium">Workshop</span>
+                            <span class="font-semibold text-slate-900">Hands-on</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">02:00 PM - 02:45 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-indigo-50 text-indigo-700 font-medium">Workshop</span>
+                            <span class="font-semibold text-slate-900">Group work</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4 bg-slate-50/70 -mx-6 px-6">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-amber-600">02:45 PM - 03:15 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-amber-100 text-amber-800 font-medium">Break</span>
+                            <span class="text-slate-600 font-medium">Afternoon Break</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">03:15 PM - 04:15 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-blue-50 text-blue-700 font-medium">Session</span>
+                            <span class="font-semibold text-slate-900">Pitch Perfect</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">04:15 PM - 04:30 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-blue-50 text-blue-700 font-medium">Session</span>
+                            <span class="font-semibold text-slate-900">Day 1 recap</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4 bg-purple-50/60 -mx-6 px-6">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-purple-700">04:30 PM - 07:00 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-purple-100 text-purple-800 font-medium">Social</span>
+                            <span class="font-semibold text-purple-950">Power On Experience offsite</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-4 bg-purple-50/60 -mx-6 px-6">
+                            <span class="w-36 shrink-0 font-mono text-xs font-semibold text-purple-700">07:00 PM - 09:00 PM</span>
+                            <span class="px-2 py-0.5 text-[11px] rounded bg-purple-100 text-purple-800 font-medium">Dinner</span>
+                            <span class="font-semibold text-purple-950">Hosted Event Dinner</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DAY 5: OCT 28 -->
+            <section id="day-4" class="day-section hidden bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+                <div class="bg-gradient-to-r from-indigo-800 via-purple-800 to-emerald-800 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-purple-200">Day 5 &bull; Wednesday, October 28, 2026</span>
+                        <h2 class="text-xl font-bold mt-0.5">Agenda Day 2 (Ends 3 PM) + Casual Shopping &amp; Barangaroo Sunset</h2>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-medium">Half Work / Half Leisure</span>
+                </div>
+                <div class="p-6 space-y-8">
+                    <!-- Part 1: Webinar -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-3 flex items-center gap-1.5">
+                            <i class="ph-fill ph-laptop text-base"></i> Part 1: Conference Agenda (09:00 AM – 03:00 PM)
+                        </h3>
+                        <div class="divide-y divide-slate-100 text-sm border rounded-xl border-slate-200 overflow-hidden">
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">09:00 AM - 09:30 AM</span>
+                                <span class="font-semibold text-slate-900">FY27 Acceleration Program overview</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">09:30 AM - 09:40 AM</span>
+                                <span class="font-semibold text-slate-900">CPET Reporting</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">09:40 AM - 10:10 AM</span>
+                                <span class="font-semibold text-slate-900">SMB Product &amp; Sales Pitch</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4 bg-slate-50">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-amber-600">10:10 AM - 10:30 AM</span>
+                                <span class="text-slate-600 font-medium">Morning Break</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">10:30 AM - 10:45 AM</span>
+                                <span class="font-semibold text-slate-900">SMB Acceleration Marketing content overview</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">10:45 AM - 11:15 AM</span>
+                                <span class="font-semibold text-slate-900">SMB Acceleration Group Workshop</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">11:15 AM - 11:30 AM</span>
+                                <span class="font-semibold text-slate-900">Envisioning Framework</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">11:30 AM - 12:00 PM</span>
+                                <span class="font-semibold text-slate-900">Prep for Hands-on Device Demo</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4 bg-slate-50">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-amber-600">12:00 PM - 01:00 PM</span>
+                                <span class="text-slate-600 font-medium">Lunch</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-slate-500">01:00 PM - 02:55 PM</span>
+                                <span class="font-semibold text-slate-900">Hands-on Device Demo</span>
+                            </div>
+                            <div class="p-3 flex items-center gap-4 bg-emerald-50/70">
+                                <span class="w-36 shrink-0 font-mono text-xs font-semibold text-emerald-700">02:55 PM - 03:00 PM</span>
+                                <span class="font-bold text-emerald-900">Day 2 close &mdash; Conference Complete!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Part 2: Post-Webinar Leisure Roadmap -->
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-3 flex items-center gap-1.5">
+                            <i class="ph-fill ph-compass text-base"></i> Part 2: Post-Webinar Casual Roadmap (03:30 PM Onwards)
+                        </h3>
+
+                        <div class="mb-5 bg-emerald-50/60 p-4 rounded-xl border border-emerald-200/70">
+                            <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-700">
+                                <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-emerald-200">1. Drop bag at Hotel (3:15 PM)</span>
+                                <i class="ph ph-arrow-right text-emerald-500"></i>
+                                <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-emerald-200">2. Metro to QVB &amp; Pitt St (4:00 PM)</span>
+                                <i class="ph ph-arrow-right text-emerald-500"></i>
+                                <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-emerald-200">3. Barangaroo Waterfront Dinner (6:30 PM)</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-28 shrink-0 text-xs font-bold text-emerald-700 pt-1">04:00 PM</div>
+                                <div class="flex-1 pb-4 border-b border-slate-100">
+                                    <h4 class="font-semibold text-slate-900">Queen Victoria Building (QVB) &amp; City Souvenirs</h4>
+                                    <p class="text-sm text-slate-600 mt-1">
+                                        After changing into casual clothes at Vibe Hotel, take the Metro 5 minutes to <strong>Gadigal / Martin Place Station</strong>. Browse the grand heritage arcades of the <strong>QVB</strong>, pick up Australian coffee beans, Haigh's Chocolates, or gifts along Pitt Street Mall.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-28 shrink-0 text-xs font-bold text-emerald-700 pt-1">06:00 PM</div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-slate-900">Sunset Drinks &amp; Dinner at Barangaroo Waterfront</h4>
+                                    <p class="text-sm text-slate-600 mt-1">
+                                        Walk 10 minutes down to <strong>Wulugul Walk at Barangaroo</strong>. It faces west across the harbour—making it the best sunset spot in Sydney. Enjoy casual waterfront dining (such as <em>Lotus Barangaroo</em> for dumplings, <em>Born by Tapavino</em>, or relaxed seafood by the water) before hopping on the 3-minute Metro from Barangaroo Station back to your hotel.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DAY 6: OCT 29 -->
+            <section id="day-5" class="day-section hidden bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-700 to-slate-800 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-amber-200">Day 6 &bull; Thursday, October 29, 2026</span>
+                        <h2 class="text-xl font-bold mt-0.5">Relaxed Morning Park Stroll &amp; Afternoon Flight Home</h2>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-white/15 text-xs font-medium">4:30 PM Departure</span>
+                </div>
+                <div class="p-6">
+                    <!-- Visual Roadmap -->
+                    <div class="mb-6 bg-amber-50/70 p-4 rounded-xl border border-amber-200/70">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-amber-800 mb-3">Thursday Departure Roadmap</div>
+                        <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-slate-700">
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-amber-200">St Leonards Park &amp; Brunch (9:30 AM)</span>
+                            <i class="ph ph-arrow-right text-amber-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-amber-200">Hotel Check-out (11:00 AM)</span>
+                            <i class="ph ph-arrow-right text-amber-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-white shadow-sm border border-amber-200">Depart for SYD Airport (12:45 PM)</span>
+                            <i class="ph ph-arrow-right text-amber-500"></i>
+                            <span class="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 border border-amber-300">Qantas QF 1 (4:30 PM)</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-amber-700 pt-1">09:00 AM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Sleep In &amp; Morning Stroll to The Greens / St Leonards Park</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    No early alarm needed. Enjoy a slow walk up Miller Street to <strong>St Leonards Park</strong> and have a relaxed brunch at <strong>The Greens North Sydney</strong> or fresh pastries at <strong>Bakehouse North Sydney</strong>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-slate-500 pt-1">11:00 AM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Check Out of Vibe Hotel North Sydney</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Complete hotel check-out. If you want an early lunch or last-minute supermarket shopping (Coles &amp; Aldi are right across the street at Greenwood Plaza) before leaving, leave your suitcase with reception for an hour.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-slate-500 pt-1">12:45 PM</div>
+                            <div class="flex-1 pb-4 border-b border-slate-100">
+                                <h3 class="font-semibold text-slate-900">Head to Sydney Kingsford Smith Airport (SYD)</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Take the Metro from Victoria Cross to Central Station and switch to the T8 Airport Line (~35 mins total), or take a 25-minute Uber/Taxi to the International Terminal (T1).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-28 shrink-0 text-xs font-bold text-brand-600 pt-1">04:30 PM</div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-slate-900">Board Qantas QF 1 to Singapore (SIN)</h3>
+                                <p class="text-sm text-slate-600 mt-1">
+                                    Nonstop flight (8h 05m). Lands back at Singapore Changi Airport at <strong>9:35 PM</strong> local time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Practical Tips & Interactive Packing / Prep Checklist -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6">
+                <h3 class="font-bold text-slate-900 text-base flex items-center gap-2 mb-4">
+                    <i class="ph-fill ph-lightbulb text-amber-500 text-xl"></i> Handy Sydney Travel Tips
+                </h3>
+                <ul class="space-y-3 text-sm text-slate-600">
+                    <li class="flex items-start gap-2.5">
+                        <i class="ph-fill ph-credit-card text-brand-600 text-lg shrink-0 mt-0.5"></i>
+                        <span><strong>No Transport Card Needed:</strong> Tap your contactless Visa, Mastercard, or Apple/Google Pay directly on Metro, train, bus, and ferry gates. Daily fares are automatically capped.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <i class="ph-fill ph-shopping-bag text-brand-600 text-lg shrink-0 mt-0.5"></i>
+                        <span><strong>Groceries Right Next Door:</strong> <em>Greenwood Plaza</em> (connected to North Sydney Station, 3 mins walk from your hotel) has a large Coles supermarket, pharmacies, and casual lunch spots.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <i class="ph-fill ph-cloud-sun text-brand-600 text-lg shrink-0 mt-0.5"></i>
+                        <span><strong>Spring Layering:</strong> Days are sunny and mild (20°C–23°C), but harbour breezes on the ferry and evenings dip to ~14°C. Keep a light jacket or sweater handy.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6">
+                <h3 class="font-bold text-slate-900 text-base flex items-center gap-2 mb-4">
+                    <i class="ph-fill ph-check-square-offset text-emerald-600 text-xl"></i> Quick Pre-Trip Checklist
+                </h3>
+                <div class="space-y-2.5 text-sm" id="checklist">
+                    <label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500">
+                        <span class="text-slate-700">Australian ETA (Sub-class 601) approved via official app</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500">
+                        <span class="text-slate-700">Select seats on Qantas QF 2 &amp; QF 1 (PNR: <code class="font-mono text-xs bg-slate-100 px-1.5 py-0.5 rounded">DFUAIX</code>)</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500">
+                        <span class="text-slate-700">Type-I Australian 3-flat-pin power adapter packed</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500">
+                        <span class="text-slate-700">Light windbreaker / jacket for harbour ferry &amp; evenings</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let showAll = false;
+
+        function selectDay(dayIndex) {
+            if (showAll) {
+                toggleAllDays(false);
+            }
+
+            // Update sections visibility
+            const sections = document.querySelectorAll('.day-section');
+            sections.forEach((sec, idx) => {
+                if (idx === dayIndex) {
+                    sec.classList.remove('hidden');
+                } else {
+                    sec.classList.add('hidden');
+                }
+            });
+
+            // Update tab button styles
+            const tabs = document.querySelectorAll('.day-tab');
+            tabs.forEach((tab, idx) => {
+                const dateLabel = tab.querySelector('span:first-child');
+                if (idx === dayIndex) {
+                    tab.className = 'day-tab flex-1 min-w-[130px] py-2.5 px-3 rounded-xl text-left transition-all bg-brand-600 text-white shadow-sm';
+                    if (dateLabel) dateLabel.className = 'text-[11px] uppercase tracking-wider opacity-80 font-medium';
+                } else {
+                    tab.className = 'day-tab flex-1 min-w-[130px] py-2.5 px-3 rounded-xl text-left transition-all hover:bg-slate-100 text-slate-700';
+                    if (dateLabel) dateLabel.className = 'text-[11px] uppercase tracking-wider text-slate-400 font-medium';
+                }
+            });
+        }
+
+        function toggleAllDays(forceState) {
+            showAll = typeof forceState === 'boolean' ? forceState : !showAll;
+            const sections = document.querySelectorAll('.day-section');
+            const btn = document.getElementById('view-mode-btn');
+
+            if (showAll) {
+                sections.forEach(sec => sec.classList.remove('hidden'));
+                btn.innerHTML = '<i class="ph ph-tabs text-base"></i><span>Single Day View</span>';
+            } else {
+                btn.innerHTML = '<i class="ph ph-rows text-base"></i><span>Show All Days</span>';
+                selectDay(0);
+            }
+        }
+
+        function copyText(text, message) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showToast(message || 'Copied to clipboard!');
+            } catch (err) {
+                showToast('Unable to copy');
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
